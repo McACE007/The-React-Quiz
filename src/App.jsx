@@ -22,7 +22,7 @@ const initialState = {
   secondsRemaining: null,
 };
 
-const SECS_PER_QUESTION = 5;
+const SECS_PER_QUESTION = 30;
 
 function reducer(state, action) {
   switch (action.type) {
