@@ -1,4 +1,4 @@
-export default function ({ points, maxPosiblePoints, highscore }) {
+export default function ({ points, maxPosiblePoints, highscore, dispatch }) {
   const percentage = (points / maxPosiblePoints) * 100;
 
   let emoji;
@@ -14,6 +14,12 @@ export default function ({ points, maxPosiblePoints, highscore }) {
         {maxPosiblePoints} ({Math.ceil(percentage)}%)
       </p>
       <p className="highscore"> (Highscore: {highscore} points) </p>
+      <button
+        className="btn btn-ui"
+        onClick={() => dispatch({ type: "restart" })}
+      >
+        Restart
+      </button>
     </>
   );
 }
